@@ -1,0 +1,126 @@
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Lobster');
+
+p{
+	font-family: 'Exo 2', sans-serif;
+	text-anchor: justify;
+}
+h3{
+	font-family: 'Lobster', cursive;
+	color: #5350e0
+}
+.sidebar{
+	font-size: 13px;
+	grid-area:side;
+	animation-name: slide-top;
+	animation-duration: 4s;
+}
+.preamble{
+	font-size: 15px;
+	line-height: 1.75;
+	grid-area:pream;
+
+}
+.explanation{ grid-area:exp; }
+.participation {grid-area:part;}
+.benefits{grid-area:ben;}
+.requirements{grid-area:req;}
+.main{
+	
+	font-size: 15px;
+	line-height: 1.75;
+	grid-area:main;
+}
+
+footer{
+	text-align: center;
+	position: relative;
+	clear: auto;
+	display: flex;
+	flex-direction: row;
+	width: 100px;
+	grid-area:foot;
+}
+.summary{
+	text-align: center;
+	
+	font-style: italic;
+	
+	grid-area:sum;
+}
+footer a{
+	padding: 15px;
+}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none;
+	color: #e8662e;
+}
+a:hover{
+	text-decoration: underline;
+	color: #ef0952;
+}
+a:visited{
+	color: #ea20ea;
+	font-weight: normal;
+}
+.intro h2{
+	position: relative;;
+}
+.intro h1{
+	font-size: 45px;
+}
+.intro{
+	grid-area:header;
+	animation-name: scale-up-hor-center;
+	animation-duration: 4s;
+}
+.page-wrapper{
+display: grid;
+  grid-template:
+    'side header'
+    'side main'
+    ;
+  grid-gap: 10px;
+  background-color: #f9f754;
+  padding: 10px;
+}
+
+.page-wrapper div{
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 20px 0;
+  font-size: 15px;
+}
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+@-webkit-keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@media screen and (max-width: 650px){
+	.page-wrapper{
+	display: grid;
+  grid-template:
+    'header'
+    'main'
+    'side';
+  grid-gap: 10px;
+  background-color: #f9f754;
+  padding: 10px;
+	}
+}
