@@ -1,0 +1,58 @@
+.hierarchy{
+	background-color: #90eda0;
+	max-width: 750px;
+	grid-area:hier;
+}
+.calculate{
+	background-color: #90edea;
+	max-width: 750px;
+	grid-area:cal;
+}
+.rule{
+	background-color: #efed81;
+	max-width: 750px;
+	grid-area:rule;
+}
+.webpage{
+  display: grid;
+  grid-template:
+    'hier rule'
+    'cal rule'
+    '  addb rule';
+  grid-gap: 3px;
+  padding: 3px;
+}
+.rule p{
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 750px){
+	.webpage{
+	display: grid;
+  	grid-template:
+    'hier'
+    'cal'
+    'rule'
+    'addb'
+    ;
+  	grid-gap: 3px;
+ 	padding: 3px;
+	}
+}
+.ben{
+	background-color: #f49ff1;
+}
+.ref{
+	background-color: #e2dee2;
+}
+.add{
+	display: flex;
+	flex-direction: column;
+	
+	grid-area:addb;
+}
+
+.add div{
+	max-width: 750px;
+}

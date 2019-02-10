@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Specificity</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>CSS Specificity</h1>
+	</header>
+
+<div class="webpage">
+	<div class="hierarchy">
+		<h2>Specificity Hierarchy</h2>
+		<p>ทุกๆselector จะมีระดับความเจาะจงอยู่แบ่งได้เป็น 4 ประเภท/ระดับ</p>
+		<ul>
+			<li>Inline styles ส่วนที่element ถูกกำหนดค่า เช่น < open tag style="color: #ffffff">Heading< close tag> </li>
+			<li>IDs คือ พวกIDที่มีลักษณะจำเพาะสำหรับpage element เช่น #good.</li>
+			<li>class,attributes and pseudo-class</li>
+				<ul>
+					<li>class เช่น .sample เป็นต้น</li>
+					<li>attribute คือ [attribute=value] </li>
+					<li>pseudo class เช่น :hover และ :focus เป็นต้น</li>
+				</ul>
+			<li>Element and pseudo-elements</li>
+				<ul>
+					<li>Elements เช่น h1, div เป็นต้น</li>
+					<li>pseudo-elements เช่น :before,:after เป็นต้น</li>
+				</ul>
+		</ul>
+	</div>
+
+	<div class="calculate">
+		<h2>การคำนวณ Specificity</h2>
+		<p>โดยจะให้แต่ละประเภทในSpecificity Hierarchy มีค่าเป็นตัวเลข</p>
+		<ul>
+			<li>Inline Styles = 1000 หรือ 1-0-0-0</li>
+			<li>IDs = 100 หรือ 0-1-0-0</li>
+			<li>class,attributes and pseudo-class = 10 หรือ 0-0-1-0</li>
+			<li>Element and pseudo -elements = 1 หรือ 0-0-0-1 </li>
+		</ul>
+		<p>ตัวอย่าง</p>
+		<ul>
+			<ol>1.h1 div</ol>
+			<ol>2.#good h4</ol>
+			<ol>3.< open tag style="color: #fff999">sample< close tag></ol>
+		</ul>
+		<p>ในข้อ1 มีค่าเป็น 2 เพราะมี 2 element</p>
+		<p>ในข้อ2 จะมีค่าเป็น 101 เพราะมี 1 ID และ 1 element</p>
+		<p>ในข้อ3 มีค่าเป็น 1000 เพราะมี 1 Inline styles</p>
+	</div>
+	<div class="rule">
+		<h2>Specificity Rules</h2>
+		<p>1.Equal specificity</p>
+			<ul>
+				<li>h1 {background-color: green;}</li>
+				<li>h1 {background-color: red;}</li>
+			</ul>
+			<aside>จะเห็นว่าทั้ง 2 บรรทัดมีค่าspecificify เท่ากัน เพราะงั้นในกรณีนี้
+			จะเอาบรรทัดที่อยู่ล่างสุด</aside>
+		<p>2.ID selectors > attribute selector</p>
+			<ul>
+				<li>h1#good{text-decoration: none;}</li>
+				<li>#good{text-decoration: underline;}</li>
+				<li>div[id=good]{text-decoration: overline;}</li>
+			</ul>
+			<aside>	บรรทัดที่ 1 มีค่า 101
+					บรรทัดที่2 มีค่า 100
+					บรรทัดที่3 มีค่า 11</aside>
+			<aside>สรุปกฎข้อนี้เราสามารถดูได้จาก ค่า specificify ที่เราได้กำหนดไว้ในหัวข้อ การคำนวณ Specificity</aside>
+		<p>3.contextual selectors > single elements selector</p>
+		<aside>contextual selectors คือ selector ที่มีselector อยู่ 2 หรือมากกว่านั้น และมีความหมายในตัวมันเองเช่น P EM { font:15px;} หมายความว่า EM ที่อยู่ใน P มีขนาดfont 15 px</aside>
+		<aside>เช่น</aside>
+		<ul>
+			<li>p {font:10px;}</li>
+			<li>p EM{font:15px;}</li>
+		</ul>
+		<aside>จะทำงานตามบรรทัดที่ 2 เพราะมีelement เยอะกว่า หรือคิดจากค่าspecificity</aside>
+
+		<p>4.class selector มีค่ามากกว่าจำนวนใดๆของ element selector</p>
+		<ul>
+			<li>.intro {background-color: yellow;}</li>
+			<li>h1 h2 h3 h4 h5 h6 div br p aside ul li {background-color: blue;}</li>
+		</ul>
+		<aside>บรรทัด 1 จะทำงานแทนบรรทัด 2</aside>
+
+		<p>5.พวก universal selector จะมีค่าspecificity เป็น 0 หรือ 0-0-0-0 ก็คือตัว *</p>
+
+		<p>6.หากกำหนดการแสดงผลๆว้ทั้งในhtml และ css มันจะเลือกใช้ของ html เพราะมีความเจาะจงมากกว่า</p>
+		<p>7.ตัว:not()นั้นไม่มีค่าspecificity หรือมีค่าเป็น 0 ถึงเแม้จะเป็น pseudo-classก็ตามแต่pseudo-class ที่อยู่ในวงเล็บจะมีค่าspecificity ตามปกติ</p>
+		<p>8.ตัว!important จะทับstyle ที่ได้เขียนไปแล้วทั้งหมด</p>
+	</div>
+  <div class="add">
+	<div class="ben">
+		<h2>Benefit</h2>
+		<ul>
+			<ol>1.ช่วยให้เข้าใจว่าทำไมบางstyle ที่เราใส่ค่าเข้าไปให้มันdisplay มันถึงไม่แสดงออกมา</ol>
+			<ol>2.ช่วยให้เราเขียนโค้ดได้เป็นระเบียบขึ้น</ol>
+		</ul>
+	</div>
+
+	 <div class="ref">
+		<h2>Reference</h2>
+		<nav>
+			<ul>
+				<ol><a href="https://www.w3schools.com/css/css_specificity.asp">https://www.w3schools.com/css/css_specificity.asp</a></ol>
+				<ol><a href="https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/">https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/</a></ol>
+				<ol><a href="https://dev.to/emmawedekind/css-specificity-1kca">https://dev.to/emmawedekind/css-specificity-1kca</a></ol>
+			</ul>
+		</nav>
+	 </div>
+	</div>
+</div>
+</body>
+</html>
