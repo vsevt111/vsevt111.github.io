@@ -1,0 +1,170 @@
+[
+  {
+    "number": 1,
+    "nationality": "Spain",
+    "position": "GK",
+    "name": "David de gea"
+  },
+  {
+    "number": 15,
+    "nationality": "Brazil",
+    "position": "MF",
+    "name": "Andreas Pereira"
+  },
+  {
+    "number": 2,
+    "nationality": "Sweden",
+    "position": "DF",
+    "name": "Victor Lindelof"
+  },
+  {
+    "number": 3,
+    "nationality": "Ivory Coast",
+    "position": "DF",
+    "name": "Eric Bailly"
+  },
+  {
+    "number": 16,
+    "nationality": "Argentina",
+    "position": "DF",
+    "name": "Marcos Rojo"
+  },
+  {
+    "number": 17,
+    "nationality": "Brazil",
+    "position": "MF",
+    "name": "Fred"
+  },
+  {
+    "number": 4,
+    "nationality": "England",
+    "position": "DF",
+    "name": "Phil Jones"
+  },
+  {
+    "number": 20,
+    "nationality": "Portugal",
+    "position": "DF",
+    "name": "Diogo Dalot"
+  },
+  {
+    "number": 6,
+    "nationality": "France",
+    "position": "MF",
+    "name": "Paul Pogba"
+  },
+  {
+    "number": 18,
+    "nationality": "England",
+    "position": "DF",
+    "name": "Ashley Young"
+  },
+  {
+    "number": 22,
+    "nationality": "Argentina",
+    "position": "GK",
+    "name": "Sergio Romero"
+  },
+  {
+    "number": 8,
+    "nationality": "Spain",
+    "position": "MF",
+    "name": "Juan Mata"
+  },
+  {
+    "number": 25,
+    "nationality": "Ecuador",
+    "position": "DF",
+    "name": "Antonio Valencia"
+  },
+  {
+    "number": 11,
+    "nationality": "France",
+    "position": "FW",
+    "name": "Anthony Martial"
+  },
+  {
+    "number": 31,
+    "nationality": "Serbia",
+    "position": "MF",
+    "name": "Nemanja Matic"
+  },
+  {
+    "number": 13,
+    "nationality": "England",
+    "position": "GK",
+    "name": "Lee Grant"
+  },
+  {
+    "number": 10,
+    "nationality": "England",
+    "position": "FW",
+    "name": "Marcus Rashford"
+  },
+  {
+    "number": 39,
+    "nationality": "Scotland",
+    "position": "MF",
+    "name": "Scott McTominay"
+  },
+  {
+    "number": 36,
+    "nationality": "Italy",
+    "position": "DF",
+    "name": "Matteo Darmian"
+  },
+  {
+    "number": 14,
+    "nationality": "England",
+    "position": "MF",
+    "name": "Jesse Lingard"
+  },
+  {
+    "number": 9,
+    "nationality": "Belgium",
+    "position": "FW",
+    "name": "Romelu Lukaku"
+  },
+  {
+    "number": 23,
+    "nationality": "England",
+    "position": "DF",
+    "name": "Luke Shaw"
+  },
+  {
+    "number": 12,
+    "nationality": "England",
+    "position": "DF",
+    "name": "Chris Smalling"
+  },
+  {
+    "number": 7,
+    "nationality": "Chile",
+    "position": "FW",
+    "name": "Alexis Sanchez"
+  },
+  {
+    "number": 21,
+    "nationality": "Spain",
+    "position": "MF",
+    "name": "Ander Herrera"
+  },
+  {
+    "number": 24,
+    "nationality": "Netherland",
+    "position": "DF",
+    "name": "Timothy Fosu-Mensah"
+  },
+  {
+    "number": 38,
+    "nationality": "England",
+    "position": "DF",
+    "name": "Axel Tuanzebe"
+  },
+  {
+    "number": 40,
+    "nationality": "Portugal",
+    "position": "GK",
+    "name": "Joel Castro Pereira"
+  }
+]

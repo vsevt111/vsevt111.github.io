@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search System</title>
+    <link rel="stylesheet" href="bulma-0.7.2/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+    <div class="container">
+        <div class="level">
+            <div class="level-item">
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label" for="input-text" id="input-form">Text: </label>
+                    </div>
+                    <div class="field-body" id="field-id">
+                        <div class="field">
+                        <p class="control">
+                            <input  class="input is-rounded" 
+                                    type="text" id="input-text"
+                                    placeholder="Enter some text">
+                        </p>
+                            <div>
+                                <button id="advanced" class="button is-info">
+                                    Advanced Search
+                                </button>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <button id="submit-btn" class="button is-primary">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="level-item">
+                <div style="display:none" style="width:250px" id="advasearch">
+                    <p class = "control">
+                            <label for="number">number: </label>
+                            <input type="text" id="number" class="input is-info">
+                            <label for="nation">nationality: </label>
+                            <input type="text" id="nation" class="input is-info">
+                            <label for="posit">position: </label>
+                            <input type="text" id="posit" class="input is-info">
+                            <label for="name">name: </label>
+                            <input type="text" id="name" class="input is-info">
+                            <button id="search" class="button is-primary">Search</button>
+                            <button id="back" class="button is-warning">Back</button>
+                    </p>
+                        
+                </div>
+            </div>
+        </div>
+        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" id="table">
+                <tr>
+                    <th>number</th>
+                    <th>nationality</th>
+                    <th>position</th>
+                    <th>name</th>
+                </tr>
+        </table>
+        <div>
+            <span>แหล่งอ้างอิง: </span>
+            <a href="https://en.wikipedia.org/wiki/Manchester_United_F.C.#First-team_squad">https://en.wikipedia.org/wiki/Manchester_United_F.C.#First-team_squad</a>
+        </div>
+    </div>
+    </section>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="myscript.js"></script>
+</body>
+</html>
